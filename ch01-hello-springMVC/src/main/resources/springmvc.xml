@@ -9,4 +9,12 @@
 
     <!--组件扫描器-->
     <context:component-scan base-package="com.dlkyy.controller"/>
+
+    <!--声明springmvc 框架中的视图解析器，帮助开发人员设置视图文件的路径-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀：视图文件的路径-->
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <!--后缀：视图文件扩展名-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>

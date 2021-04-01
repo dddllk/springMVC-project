@@ -47,8 +47,12 @@ public class MyController {
     // 指定视图，指定视图的完整路径
     // 框架对视图的操作执行forward操作，
     // 相当于：request.getRequestDispatcher("/show.jsp").forward(request,response)
-    mv.setViewName("/show.jsp");
+    // mv.setViewName("/show.jsp");
+    // mv.setViewName("/WEB-INF/view/show.jsp");
 
+    // 当配置了视图解析器后，可以使用逻辑名称（文件名），指定视图
+    // 框架会使用视图解析器的前缀 + 逻辑名称 + 后缀组成完整路径，这里就是字符串的连接操作
+    mv.setViewName("show");
     // 返回
     return mv;
   }
